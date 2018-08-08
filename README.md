@@ -4,5 +4,5 @@ Redis cluster test
 
 ## Redis
 ```bash
-$ redis-cli
+$ redis-cli info
 ```
