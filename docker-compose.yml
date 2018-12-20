@@ -6,6 +6,7 @@ services:
        - "6379:6379"
     volumes:
       - "./conf/redis-01.conf:/usr/local/etc/redis/redis.conf"
+      - "./data/redis-01:/data"
     command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
     network_mode: "host"
 
@@ -13,6 +14,7 @@ services:
     image: redis
     volumes:
       - "./conf/redis-02.conf:/usr/local/etc/redis/redis.conf"
+      - "./data/redis-02:/data"
     command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
     network_mode: "host"
 
@@ -20,9 +22,34 @@ services:
     image: redis
     volumes:
       - "./conf/redis-03.conf:/usr/local/etc/redis/redis.conf"
+      - "./data/redis-03:/data"
     command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
     network_mode: "host"
 
- 
+
+  redis4:
+    image: redis
+    volumes:
+      - "./conf/redis-04.conf:/usr/local/etc/redis/redis.conf"
+      - "./data/redis-04:/data"
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    network_mode: "host"
+
+  redis5:
+    image: redis
+    volumes:
+      - "./conf/redis-05.conf:/usr/local/etc/redis/redis.conf"
+      - "./data/redis-05:/data"
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    network_mode: "host"
+
+  redis6:
+    image: redis
+    volumes:
+      - "./conf/redis-06.conf:/usr/local/etc/redis/redis.conf"
+      - "./data/redis-06:/data"
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    network_mode: "host"
+
 
 
