@@ -5,27 +5,24 @@ services:
     ports:
        - "6379:6379"
     volumes:
-      - "./redis.conf:/usr/local/etc/redis/redis.conf"
-    networks:
-      - redis-network
+      - "./conf/redis-01.conf:/usr/local/etc/redis/redis.conf"
     command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    network_mode: "host"
 
   redis2:
     image: redis
     volumes:
-      - "./redis.conf:/usr/local/etc/redis/redis.conf"
-    networks:
-      - redis-network
+      - "./conf/redis-02.conf:/usr/local/etc/redis/redis.conf"
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    network_mode: "host"
 
   redis3:
     image: redis
     volumes:
-      - "./redis.conf:/usr/local/etc/redis/redis.conf"
-    networks:
-      - redis-network
+      - "./conf/redis-03.conf:/usr/local/etc/redis/redis.conf"
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    network_mode: "host"
 
  
-networks:
-    redis-network:
 
 
