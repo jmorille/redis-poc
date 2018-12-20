@@ -3,7 +3,8 @@ Redis cluster test
 
 ## Redis Cluster
 * https://redis.io/topics/cluster-tutorial
-
+* https://www.digitalocean.com/community/tutorials/how-to-install-secure-redis-centos-7
+* https://redis.io/topics/security
 
 ## Redis client
 
